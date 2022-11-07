@@ -21,6 +21,7 @@ public class WeatherForecastController : ControllerBase
     public async Task<IActionResult> GetAsync()
     {
         var forecasts = await _repository.GetAllAsync();
+        Thread.Sleep(2500);
         return Ok(forecasts);
     }
 
